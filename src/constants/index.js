@@ -1,7 +1,7 @@
 import project1 from "../assets/projects/Project-1.png";
 import project2 from "../assets/projects/Project-2.png";
-import project3 from "../assets/projects/project-5.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+import project3 from "../assets/projects/Project-3.jpg";
+import project4 from "../assets/projects/Project-4.png";
 
 export const HERO_CONTENT = `I am an aspiring data and business enthusiast with a strong foundation in building analytical tools and user-focused platforms. My experience includes working with tools like Excel, Power BI, and SQL, as well as projects such as Code-Quest, a technical Q&A platform, and SummarizeX, an AI-powered article summarization tool with multilingual and text-to-speech support. I’ve developed dashboards and solutions that uncover key insights and support decision-making. My goal is to apply strategic thinking, analytical skills, and real-time communication tools to solve business problems and create meaningful, scalable solutions that drive growth and efficiency.`;
 
