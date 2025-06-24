@@ -18,7 +18,7 @@ const Navbar = () => {
       </div>
       <div className='m-8 flex items-center justify-center gap-4 text-2xl'>
         <motion.a
-          href="https://www.linkedin.com/in/shrikrushna-p-89a667334"
+          href="https://www.linkedin.com/in/shrikrushna-r-prajapati-89a667334/"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.1, rotate: 10 }}
