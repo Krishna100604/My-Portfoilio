@@ -1,6 +1,6 @@
 import React from 'react'
 import { HERO_CONTENT } from '../constants'
-import profilePic from "../assets/Krishna-logo.png"
+import profilePic from "../assets/Krishna_Photo(1).png"
 import { motion } from 'framer-motion'
 
 const Hero = () => {
@@ -25,16 +25,6 @@ const Hero = () => {
               Shikrushna Prajapati
             </motion.h1>
             
-            {/* Animated Gradient Text
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className='bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent'
-            >
-              Passionate Software Developer
-            </motion.span> */}
-
             {/* Animated Description */}
             <motion.p
               initial={{ y: 50, opacity: 0 }}
@@ -58,7 +48,7 @@ const Hero = () => {
             <motion.img 
               src={profilePic} 
               alt="Shikrushna" 
-              className=' w-150 h-350 lg:w-70 lg:h-96 '
+              className='w-72 h-auto lg:w-96 lg:h-auto'
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3 }}
             />
