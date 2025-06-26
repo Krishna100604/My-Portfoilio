@@ -4,20 +4,27 @@ import { motion } from 'framer-motion'
 
 const Experience = () => {
   const containerVariants = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, ease: 'easeInOut' }
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2, ease: 'easeOut' },
+    },
   }
 
-  const techHoverEffect = {
-    whileHover: { scale: 1.1, backgroundColor: "#6B21A8", color: "#fff" }, // change color on hover
-    transition: { duration: 0.3 }
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  }
+
+  const techVariants = {
+    whileHover: { scale: 1.1, borderColor: '#22D3EE', boxShadow: '0 0 8px rgba(34, 211, 238, 0.3)' },
+    transition: { duration: 0.3 },
   }
 
   return (
-    <div className='border-b border-neutral-900 pb-4'>
-      <motion.h1 
-        className='my-20 text-center text-4xl'
+    <div className='border-b border-neutral-900 pb-10'>
+      <motion.h1
+        className='my-16 text-center text-4xl font-semibold bg-gradient-to-r from-cyan-300 to-purple-400 bg-clip-text text-transparent'
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -25,45 +32,52 @@ const Experience = () => {
         Experience
       </motion.h1>
 
-      <div>
+      <motion.div
+        className='max-w-5xl mx-auto'
+        variants={containerVariants}
+        initial='hidden'
+        animate='visible'
+      >
         {EXPERIENCES.map((experience, index) => (
-          <motion.div 
-            key={index} 
-            className='mb-8 flex flex-wrap lg:justify-center'
-            initial="initial"
-            animate="animate"
-            variants={containerVariants}
-            transition={{ delay: index * 0.2 }} // staggering entries
+          <motion.div
+            key={index}
+            className='mb-8 bg-neutral-900/50 backdrop-blur-lg rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300'
+            variants={cardVariants}
+            whileHover={{ y: -5 }}
           >
-            {/* Left Section - Year */}
-            <div className='w-full lg:w-1/4'>
-              <p className='mb-2 text-sm text-neutral-400'>{experience.year}</p>
-            </div>
+            <div className='grid grid-cols-1 lg:grid-cols-4 gap-4'>
+              {/* Year */}
+              <div className='lg:col-span-1'>
+                <p className='text-sm text-neutral-400'>{experience.year}</p>
+              </div>
 
-            {/* Right Section - Role and Description */}
-            <div className='w-full max-w-full lg:w-3/4'>
-              <h6 className='font-semibold mb-2'>
-                {experience.role} - <span className='text-sm text-purple-100'>
-                  {experience.company}
-                </span>
-              </h6> 
-              <p className='mb-4 text-neutral-400'>{experience.description}</p>
-
-              {/* Technologies */}
-              {experience.technologies.map((tech, index) => (
-                <motion.span 
-                  key={index} 
-                  className='mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-small font-medium text-purple-500'
-                  whileHover="whileHover"
-                  {...techHoverEffect} // Apply hover effect to technologies
-                >
-                  {tech}
-                </motion.span>
-              ))}
+              {/* Role and Description */}
+              <div className='lg:col-span-3'>
+                <h6 className='font-semibold text-lg text-neutral-200'>
+                  {experience.role} - <span className='text-sm text-purple-200'>{experience.company}</span>
+                </h6>
+                <p className='mt-2 text-base text-neutral-300 leading-relaxed'>{experience.description}</p>
+                <div className='mt-4 flex flex-wrap gap-2'>
+                  {experience.technologies.map((tech, techIndex) => (
+                    <motion.span
+                      key={techIndex}
+                      className='rounded bg-neutral-800 px-3 py-1 text-sm font-medium text-cyan-300 border border-cyan-300/20'
+                      variants={techVariants}
+                      whileHover='whileHover'
+                      aria-label={`Technology: ${tech}`}
+                    >
+                      {tech}
+                    </motion.span>
+                  ))}
+                </div>
+              </div>
             </div>
+            {index < EXPERIENCES.length - 1 && (
+              <div className='mt-6 h-0.5 w-full bg-gradient-to-r from-cyan-300/20 to-purple-400/20' />
+            )}
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   )
 }

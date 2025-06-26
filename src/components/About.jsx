@@ -6,14 +6,14 @@ import { motion } from 'framer-motion'
 const About = () => {
     return (
         <div className='border-b border-neutral-900 pb-4'>
-            <motion.h1 
-              className='my-20 text-center text-4xl'
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-                About Me
-            </motion.h1>
+           <motion.h1
+        className='my-12 text-center text-4xl font-bold bg-gradient-to-r from-cyan-300 to-purple-400 bg-clip-text text-transparent'
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        About Me
+      </motion.h1>
 
             <div className='flex flex-wrap'>
                 {/* Left Section - Image */}

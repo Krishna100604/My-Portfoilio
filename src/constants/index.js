@@ -17,6 +17,13 @@ dynamic Excel-based Bike Sales Dashboard, both aimed at generating actionable in
 
 
 export const EXPERIENCES = [
+   {
+    year: "Dec 2024 - Mar 2025",
+    role: "Events' Head",
+    company: "INCIDENT'25 – NITK Surathkal",
+    description: `Led a 5-member team in organizing South India’s largest cultural fest, overseeing end-to-end event planning, sponsorship acquisition, and execution. Successfully secured ₹80,000 in sponsorship from Krafton by co-designing a gaming event. Managed vendor coordination, logistics, and marketing collaborations to ensure smooth operations and high audience engagement, significantly boosting the fest's visibility and impact.`,
+    technologies: ["Leadership", "Strategic Planning", "Event Management", "Marketing"]
+  },
   {
     year: "May 2024 - Aug 2024",
     role: "Full Stack Developer",
@@ -32,13 +39,7 @@ export const EXPERIENCES = [
     technologies: ["HTML", "CSS", "React.js", "Javascript"],
   },
 
-  {
-    year: "Dec 2024 - Mar 2025",
-    role: "Events Head",
-    company: "INCIDENT'25 – NITK Surathkal",
-    description: `Led a 5-member team in organizing South India’s largest cultural fest, overseeing end-to-end event planning, sponsorship acquisition, and execution. Successfully secured ₹80,000 in sponsorship from Krafton by co-designing a gaming event. Managed vendor coordination, logistics, and marketing collaborations to ensure smooth operations and high audience engagement, significantly boosting the fest's visibility and impact.`,
-    technologies: ["Leadership", "Strategic Planning", "Event Management", "Marketing"]
-  }
+ 
 
   // {
   //   year: "2020 - 2021",
