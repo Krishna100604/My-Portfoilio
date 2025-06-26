@@ -64,10 +64,10 @@ const Hero = () => {
             
             {/* Animated Description */}
             <motion.div
-              className='bg-neutral-950/30 dark:bg-neutral-100/30 backdrop-blur-sm rounded-lg max-w-xl w-full shadow-md my-2 py-6'
+              className=' dark:bg-neutral-100/30 backdrop-blur-sm  max-w-xl w-full  my-2 py-6'
               variants={itemVariants}
             >
-              <p className='text-base sm:text-lg text-neutral-200 dark:text-neutral-900 leading-relaxed text-center lg:text-left'>
+              <p className='text-base sm:text-lg  leading-relaxed text-center lg:text-left'>
                 {HERO_CONTENT}
               </p>
             </motion.div>
