@@ -1,95 +1,60 @@
 import React from 'react'
-import { HERO_CONTENT } from '../constants'
-import profilePic from "../assets/Krishna_Photo(1).png"
+import aboutImg from "../assets/About-Me.jpg"
+import { ABOUT_TEXT } from '../constants'
 import { motion } from 'framer-motion'
 
-const Hero = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.8, staggerChildren: 0.2, ease: 'easeOut' } },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
-
-  return (
-    <div className='border-b border-neutral-900 dark:border-neutral-300 pb-8 mb-10'>
-      <motion.div 
-        className='max-w-5xl mx-auto px-6 sm:px-8 flex flex-col lg:flex-row'
-        variants={containerVariants}
-        initial='hidden'
-        animate='visible'
-      >
-        {/* Right Section - Profile Image */}
-        <div className='w-full lg:w-1/2 p-4 sm:p-6 lg:p-8 order-first lg:order-none'>
-          <motion.div
-            className='flex justify-center relative group'
-            variants={itemVariants}
-          >
-            <motion.img 
-              src={profilePic} 
-              alt="Shikrushna Prajapati, a passionate software developer"
-              className='rounded-lg shadow-lg object-contain w-full max-w-sm lg:max-w-md h-auto z-10'
-              whileHover={{ scale: 1.05, boxShadow: '0 0 15px rgba(34, 211, 238, 0.5)' }}
-              transition={{ duration: 0.3 }}
-            />
-            <div 
-              className='absolute inset-[-8px] rounded-lg'
-              style={{ 
-                pointerEvents: 'none',
-                background: 'linear-gradient(45deg, #22D3EE, #9333EA, #22D3EE)',
-                backgroundSize: '200% 200%',
-                animation: 'shimmer 5s ease-in-out infinite',
-                WebkitMask: 'radial-gradient(circle, transparent 8px, white 10px)',
-                mask: 'radial-gradient(circle, transparent 8px, white 10px)',
-                boxShadow: '0 0 12px rgba(34, 211, 238, 0.4), 0 0 20px rgba(147, 51, 234, 0.3)',
-              }}
-            />
-          </motion.div>
-        </div>
-
-        {/* Left Section - Text */}
-        <div className='w-full lg:w-1/2 mt-4 sm:mt-6 lg:mt-0'>
-          <motion.div 
-            className='flex flex-col justify-center lg:justify-start'
-            variants={itemVariants}
-          >
-            {/* Animated Heading */}
-            <motion.h1
-              className='pb-6 sm:pb-8 lg:pb-12 text-4xl sm:text-5xl font-bold tracking-tight lg:mt-16 lg:text-7xl bg-gradient-to-r from-cyan-300 to-purple-400 bg-clip-text text-transparent'
-              variants={itemVariants}
-              style={{ textShadow: '0 0 8px rgba(34, 211, 238, 0.4)' }}
+const About = () => {
+    return (
+        <div className='border-b border-neutral-900 pb-4'>
+            <motion.h1 
+              className='my-20 text-center text-4xl'
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >
-              Shikrushna Prajapati
+                About Me
             </motion.h1>
-            
-            {/* Animated Description */}
-            <motion.div
-              className='bg-neutral-950/30 dark:bg-neutral-100/30 backdrop-blur-sm rounded-lg max-w-xl w-full shadow-md my-2 py-6'
-              variants={itemVariants}
-            >
-              <p className='text-base sm:text-lg text-neutral-200 dark:text-neutral-900 leading-relaxed text-center lg:text-left'>
-                {HERO_CONTENT}
-              </p>
-            </motion.div>
-          </motion.div>
+
+            <div className='flex flex-wrap'>
+                {/* Left Section - Image */}
+                <motion.div 
+                    className='w-full lg:w-1/2 lg:p-8'
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                    <div className='flex items-center justify-center'>
+                        <motion.img 
+                          className="rounded-2xl" 
+                          src={aboutImg} 
+                          alt='' 
+                          whileHover={{ scale: 1.05 }} 
+                          transition={{ duration: 0.3 }}
+                        />
+                    </div>
+                </motion.div>
+
+                {/* Right Section - Text */}
+                <motion.div 
+                    className='w-full lg:w-1/2'
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                >
+                    <div className='flex justify-center lg:justify-start'>
+                        <motion.p 
+                          className='my-2 max-w-xl py-6'
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 1, delay: 0.6 }}
+                        >
+                            {ABOUT_TEXT}
+                        </motion.p>
+                    </div>
+                </motion.div>
+            </div>
         </div>
-      </motion.div>
-      <style jsx>{`
-        @keyframes shimmer {
-          0% { background-position: 0% 50%; opacity: 0.8; }
-          50% { background-position: 200% 200%; opacity: 1; }
-          100% { background-position: 0% 50%; opacity: 0.8; }
-        }
-        .group:hover .absolute.inset-[-8px] {
-          animation-duration: 3s; /* Speed up shimmer on hover */
-          box-shadow: 0 0 15px rgba(34, 211, 238, 0.6), 0 0 25px rgba(147, 51, 234, 0.5);
-        }
-      `}</style>
-    </div>
-  )
+    )
 }
 
-export default Hero
+export default About
