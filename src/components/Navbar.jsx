@@ -43,7 +43,7 @@ const Navbar = () => {
         variants={itemVariants}
       >
         {[
-          { href: 'https://www.linkedin.com/in/shrikrushna-r-prajapati-789a667334/', icon: <FaLinkedin />, label: 'LinkedIn' },
+          { href: 'https://www.linkedin.com/in/shrikrushna-r-89a667334/', icon: <FaLinkedin />, label: 'LinkedIn' },
           { href: 'https://github.com/Krishna100604', icon: <FaGithub />, label: 'GitHub' },
           { href: 'https://leetcode.com/u/Shrikrushna2004/', icon: <SiLeetcode />, label: 'LeetCode' },
           { href: 'https://www.geeksforgeeks.org/user/shrikrishna_10/', icon: <SiGeeksforgeeks />, label: 'GeeksforGeeks' },
