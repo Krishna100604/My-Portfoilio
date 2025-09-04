@@ -3,18 +3,9 @@ import project2 from "../assets/projects/Project-2.png";
 import project3 from "../assets/projects/Project-3.jpg";
 import project4 from "../assets/projects/Project-4.png";
 
-export const HERO_CONTENT = `I am an aspiring data and business enthusiast with a strong foundation in building analytical tools and user-focused platforms. My experience includes working with tools like Excel, Power BI, and SQL, as well as projects such as Code-Quest, a technical Q&A platform, and SummarizeX, an AI-powered article summarization tool with multilingual and text-to-speech support. I’ve developed dashboards and solutions that uncover key insights and support decision-making. My goal is to apply strategic thinking, analytical skills, and real-time communication tools to solve business problems and create meaningful, scalable solutions that drive growth and efficiency.`;
+export const HERO_CONTENT = `I am an aspiring data and business enthusiast with a strong foundation in building analytical tools and user-focused platforms. My experience spans tools like Excel, Power BI, and SQL, along with projects such as Code-Quest, a technical Q&A platform, and SummarizeX, an AI-powered article summarization tool with multilingual and text-to-speech support. I’ve developed dashboards and solutions that uncover key insights and support decision-making. Currently, I am also building *CINELITH — redefining the future of how we experience cinema*. My goal is to apply strategic thinking, analytical skills, and real-time communication tools to solve business problems and create meaningful, scalable solutions that drive growth and efficiency.`;  
 
-export const ABOUT_TEXT = `I am a Chemical Engineering graduate from NIT Karnataka, 
-driven by a strong interest in data-driven decision-making and strategic analysis. I bring hands-on 
-experience working on real-world data projects such as a Power BI-based HR Analytics Dashboard and a 
-dynamic Excel-based Bike Sales Dashboard, both aimed at generating actionable insights and enhancing
- business outcomes. Additionally, I’ve built platforms like Code-Quest, a technical Q&A tool, and SummarizeX, 
- an AI-powered article summarization app, integrating features like multilingual 
- support and user interaction tools. My work during INCIDENT’25—South India’s 
- largest cultural fest—where I led event execution and secured sponsorships 
- worth ₹80,000, further reflects my ability to handle high-stakes, cross-functional initiatives. I aim to combine my skills in analysis, communication, and user-centric design to contribute meaningfully to data-driven roles and build impactful business solutions.`;
-
+export const ABOUT_TEXT = `I am a Chemical Engineering graduate from NIT Karnataka, driven by a strong interest in data-driven decision-making and strategic analysis. I bring hands-on experience working on real-world data projects such as a Power BI-based HR Analytics Dashboard and a dynamic Excel-based Bike Sales Dashboard, both aimed at generating actionable insights and enhancing business outcomes. Additionally, I’ve built platforms like Code-Quest, a technical Q&A tool, and SummarizeX, an AI-powered article summarization app, integrating features like multilingual support and user interaction tools. I am also the founder of *CINELITH — a new era for movie lovers*, which reflects my passion for combining technology, creativity, and community-building. My work during INCIDENT’25—South India’s largest cultural fest—where I led event execution and secured sponsorships worth ₹80,000, further reflects my ability to handle high-stakes, cross-functional initiatives. I aim to combine my skills in analysis, communication, and user-centric design to contribute meaningfully to data-driven roles and build impactful business solutions.`;  
 
 export const EXPERIENCES = [
    {
