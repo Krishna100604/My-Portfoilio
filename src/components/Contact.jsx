@@ -39,13 +39,13 @@ const Contact = () => {
         >
           {CONTACT.address}
         </motion.p>
-        <motion.p
+        {/* <motion.p
           className='my-4 text-lg text-neutral-300 hover:text-cyan-400 transition-colors duration-300'
           variants={itemVariants}
           whileHover={{ scale: 1.05 }}
         >
           {CONTACT.phoneNo}
-        </motion.p>
+        </motion.p> */}
         <motion.a
           href={`mailto:${CONTACT.email}`}
           className='text-lg text-neutral-300 relative group'

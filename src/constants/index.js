@@ -78,8 +78,8 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-  address: "Vadali,Gujarat,383235",
-  phoneNo: "+919313060298 ",
+  address: "Gujarat,383235",
+  // phoneNo: "+919313060298 ",
   email: "rsp31577@gmail.com",
 };
 
